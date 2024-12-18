@@ -4,19 +4,19 @@
 # Choose your own story
 
 def startgame():
-    userinput = input("Would you like to play? (yes/no) ").lower().strip()
+    userinput = input("Would you like to play? (yes/no) ").lower().strip()  # asks the user to start the game
 
     if userinput == "yes":
         cityscene()
     else: 
         print("Thats to bad:(")
 
-def cityscene():
+def cityscene(): # sets the starting scene of the story
     print("You are walking down the city streets on a sunny afternoon")
     print("You suddenly hear the screech of tires and the breaking of glass")
     print("You look down the street and see that a car has just ran through the front of a jewelry store!")
     
-    userinput = input("Do you decide to get a closer look at the action? (yes/no)").lower().strip()
+    userinput = input("Do you decide to get a closer look at the action? (yes/no)").lower().strip() # lower and strip makes sure that the anser will work even if it has extra space or capital letters
     
     if userinput == "yes":
         robberyscene()
@@ -26,7 +26,7 @@ def cityscene():
         print("You think to youself maybe you should have checked out what was going on")
         print("Your story ends here")
     
-def robberyscene():
+def robberyscene(): # stores the narrative in its own specific file
     f = open("robberyscene.txt", "r")
     data = f.read()
     f.close()
@@ -39,7 +39,7 @@ def robberyscene():
     else:
         cowardpath()
 
-def heropath():
+def heropath(): # stores the narrative in its own specific file
     f = open("heropath.txt", "r")
     data = f.read()
     f.close()
@@ -49,19 +49,19 @@ def heropath():
 
     if userinput == "take":
                 escapescene()
-    else:
+    else: # stores the narrative in its own specific file
         f = open("easywayout.txt", "r")
         data = f.read()
         f.close()
         print(data)
         
-def cowardpath():
+def cowardpath(): # stores the narrative in its own specific file
     f = open("cowardpath.txt", "r")
     data = f.read()
     f.close()
     print(data)
 
-def escapescene():
+def escapescene(): # stores the narrative in its own specific file
     f = open("escapescene.txt", "r")
     data = f.read()
     f.close()
@@ -69,20 +69,20 @@ def escapescene():
                 
     userinput = input("You come to a light, do you decide to continue driving downtown or get on the highway? (downtown/highway)")
 
-    if userinput == "downtown":
+    if userinput == "downtown": # stores the narrative in its own specific file
         f = open("downtown.txt", "r")
         data = f.read()
         f.close()
         print(data)
     
-    else:
+    else: # stores the narrative in its own specific file
         f = open("highwayscene.txt", "r")
         data = f.read()
         f.close()
         print(data)
 
 
-startgame() 
+startgame() # finishes up the game ending the loop
 
 
 
