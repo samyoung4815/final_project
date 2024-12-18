@@ -1,0 +1,2 @@
+# final_project
+My project is a choose your own story. The player must choose options as they are presented inside of the game. I have one main code and a few files storing the information of the story narrative.
